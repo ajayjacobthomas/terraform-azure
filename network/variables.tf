@@ -1,4 +1,4 @@
-variable "resource_group_name" {
+variable "eu_resource_group" {
   description = "The name of the resource group"
   type        = string
   default     = "EU_RG"
@@ -10,7 +10,7 @@ variable "location" {
   default     = "westeurope"
 }
 
-variable "vnet_name" {
+variable "vnet_euwest" {
   description = "The name of the virtual network"
   type        = string
   default     = "EU-VNet"
@@ -22,26 +22,26 @@ variable "vnet_address_space" {
   default     = ["10.20.0.0/16"]
 }
 
-variable "subnet1_name" {
-  description = "The name of subnet 1"
+variable "eu_subnet1" {
+  description = "subnet 1 EU for Linux"
   type        = string
-  default     = "EU-Linux-Subnet"
+  default     = "eu-Linux-Subnet"
 }
 
-variable "subnet1_prefix" {
-  description = "The address prefix for subnet 1"
+variable "eu_subnet1_prefix" {
+  description = "The address prefix for EU subnet 1"
   type        = list(string)
   default     = ["10.20.1.0/24"]
 }
 
-variable "subnet2_name" {
-  description = "The name of subnet 2"
+variable "eu_subnet2" {
+  description = "subnet 2 EU for Windows"
   type        = string
-  default     = "EU_Windoss-Subnet"
+  default     = "eu_Windows-Subnet"
 }
 
-variable "subnet2_prefix" {
-  description = "The address prefix for subnet 2"
+variable "eu_subnet2_prefix" {
+  description = "The address prefix for EU subnet 2"
   type        = list(string)
   default     = ["10.30.2.0/24"]
 }
